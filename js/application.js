@@ -52,8 +52,10 @@ jQuery(document).ready(function(){
 	});*/
 	
 	
-	//Cargar librería Lightbox
-	jQuery(".boxer").boxer();
+	//Cargar librería Lightbox 
+	if (jQuery("#cont_fotos_videos_i").is(":visible") ) {
+		jQuery(".boxer").boxer();
+	}
 	
 	jQuery(window).scroll(control_scroll);
 	
