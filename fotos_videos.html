@@ -12,7 +12,7 @@
 	<meta property="og:image" content=""/>
 	<meta property="og:site_name" content=""/>
 	<meta property="og:description" content=""/>
-    <title>Out & About | Recursos</title>
+    <title>Out & About | Fotos y Videos</title>
 
     
     <!-- Custom CSS -->
@@ -27,13 +27,14 @@
     <![endif]-->
   </head>
   <body>
+  	<div id="mask_wrapper">
   	<div id="background-left-space" class="bg_space"></div>
     <div id="background-right-space" class="bg_space"></div>
   	<div id="wrapper">
     	<!--Cabecera-->
     	<div id="cabecera">
         	<div class="contenedor">
-            	<h1 id="logo_libro">Out & About</h1>
+            	<h1 id="logo_libro"><a href="index.html">Out & About</a></h1>
                 <h2 id="logo_cambridge">Cambridge</h2>
                 <span class="manchas"></span>
                 <h2 id="titul_secc">Recursos del curso</h2>
@@ -41,9 +42,9 @@
                 <div id="menu_cab">
                 	<ul class="main_menu">
                         <li><a href="curso.html">El Curso</a></li>
-                        <li><a href="recurso.html" class="active">Recursos</a></li>
-                        <li><a href="#">Fotos y videos</a></li>
-                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="recurso.html">Recursos</a></li>
+                        <li><a href="fotos_videos.html" class="active">Fotos y videos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
                      </ul>	
                 </div>
                 <div id="rrss_cab">
@@ -59,60 +60,44 @@
         <!--Cuerpo-->
         <div id="cuerpo">
         	<div class="contenedor">
-            	<div id="cont_recursos">
-                	<div class="colum_recursos">
-                    	<div class="body_recurso">
-                    		<h3>Recursos</h3>
-                        	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br/><br/>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, </p>	
-                        </div>
-                    </div>	
-                    <div class="colum_recursos">
-                    	<div id="list_recursos">
-                        	
-                            <div class="bloque_r" style="background-image:url(img/test3.jpg);">
-                               <a class="link_block" href="single.html" title="">
+    			<div id="cont_fotos_videos">
+                	<h3>Ut enim ad minim veniam</h3>
+                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+                    <div id="list_fotos_videos">
+                    
+                    	<div class="bloque_r" style="background-image:url(img/test3.jpg);">
+                               <a class="link_block" href="inside_f_v.html" title="">
                                     <div class="inside_bloque">
                                        <div class="content_bloque">
                                            <div class="separador rojo"></div>
-                                           <p class="txt_cont">Ut labore et dolore</p>
+                                           <p class="txt_cont">Vídeos</p>
                                        </div>
                                     </div>
                                 </a>
                             </div>
                             <div class="bloque_r" style="background-image:url(img/test1.jpg);">
-                            	<a class="link_block" href="single.html" title="">
+                            	<a class="link_block" href="inside_f_v.html" title="">
                                     <div class="inside_bloque">
                                        <div class="content_bloque">
                                            <div class="separador rojo"></div>
-                                           <p class="txt_cont">Minim veniam ostrud exercitation</p>
+                                           <p class="txt_cont">Fotos</p>
                                        </div>
                                     </div>
                                 </a>
                             </div>
                             <div class="bloque_r" style="background-image:url(img/test4.jpg);">
-                            	<a class="link_block" href="single.html" title="">
+                            	<a class="link_block" href="inside_f_v.html" title="">
                                     <div class="inside_bloque">
                                        <div class="content_bloque">
                                            <div class="separador rojo"></div>
-                                           <p class="txt_cont">Sed do eiusmod tempor incididunt ut</p>
+                                           <p class="txt_cont">Tips &#38; Tricks</p>
                                        </div>
                                     </div>
                                 </a>
                             </div>
-                            <div class="bloque_r" style="background-image:url(img/test2.jpg);">
-                            	<a class="link_block" href="single.html" title="">
-                                    <div class="inside_bloque">
-                                       <div class="content_bloque">
-                                           <div class="separador rojo"></div>
-                                           <p class="txt_cont">Lorem ipsum dolor sit amet, onsectetur adipisicing elit, sed</p>
-                                       </div>
-                                    </div>
-                                </a>
-                            </div>
-                            	
-                        </div>
+                    
                     </div>
-          		</div>	
+                </div>
             </div>
         </div>
         <!--Fin Cuerpo-->
@@ -121,17 +106,19 @@
         	<div class="contenedor">
                 <div id="pie_rrss">
                 	<div class="interior_pie">
-                        <ul class="list_rrss rrss_blanco">
-                            <li><a class="fa fa-twitter" href="#"><span class="hide">Twitter</span></a></li>
-                            <li><a class="fa fa-facebook" href="#"><span class="hide">Facebook</span></a></li>
-                            <li><a class="fa fa-youtube-play" href="#"><span class="hide">Youtube</span></a></li>
-                         </ul>
-                         <p>Síguenos</p>
+                    	<div class="right_p_rrss">
+                            <p>Síguenos</p>
+                            <ul class="list_rrss rrss_blanco">
+                                <li><a class="fa fa-twitter" href="#"><span class="hide">Twitter</span></a></li>
+                                <li><a class="fa fa-facebook" href="#"><span class="hide">Facebook</span></a></li>
+                                <li><a class="fa fa-youtube-play" href="#"><span class="hide">Youtube</span></a></li>
+                             </ul>
+                         </div>
                          <ul class="menu_pie">
                             <li><a href="curso.html" title="">El Curso</a></li>
                             <li><a href="recurso.html" title="">Recursos</a></li>
-                            <li><a href="#" title="">Fotos y Videos</a></li>
-                            <li><a href="#" title="">Nosotros</a></li>
+                            <li><a href="fotos_videos.html" title="">Fotos y Videos</a></li>
+                            <li><a href="nosotros.html" title="">Nosotros</a></li>
                             <li><a href="#" title="">Contacto</a></li>
                          </ul>
                    </div>  
@@ -140,8 +127,8 @@
                     <div class="interior_pie">
                         <p class="logo_foot">Cambridge University Press</p>
                         <p class="copy_foot">&copy; Cambridge University Press 2014
-                            <span><a href="/aviso-legal">Aviso legal</a></span>
-                            <span><a href="/nosotros/contacto">Contacto</a></span>
+                            <span><a href="#">Aviso legal</a></span>
+                            <span><a href="#">Contacto</a></span>
                         </p>
                     </div>
                 </div>
@@ -149,7 +136,8 @@
         </div>
         <!--Fin pie-->
         <a href="#" class="up-window">Subir</a>
-    </div><!--Fin wrapper-->    
+    </div><!--Fin wrapper--> 
+    </div><!--Fin mask wrapper-->     
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.bxslider.min.js"></script>
     <script src="js/jquery.cookie.js"></script>

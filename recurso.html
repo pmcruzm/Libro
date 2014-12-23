@@ -27,13 +27,14 @@
     <![endif]-->
   </head>
   <body>
+  	<div id="mask_wrapper">
   	<div id="background-left-space" class="bg_space"></div>
     <div id="background-right-space" class="bg_space"></div>
   	<div id="wrapper">
     	<!--Cabecera-->
     	<div id="cabecera">
         	<div class="contenedor">
-            	<h1 id="logo_libro">Out & About</h1>
+            	<h1 id="logo_libro"><a href="index.html">Out & About</a></h1>
                 <h2 id="logo_cambridge">Cambridge</h2>
                 <span class="manchas"></span>
                 <h2 id="titul_secc">Recursos del curso</h2>
@@ -42,8 +43,8 @@
                 	<ul class="main_menu">
                         <li><a href="curso.html">El Curso</a></li>
                         <li><a href="recurso.html" class="active">Recursos</a></li>
-                        <li><a href="#">Fotos y videos</a></li>
-                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="fotos_videos.html">Fotos y videos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
                      </ul>	
                 </div>
                 <div id="rrss_cab">
@@ -109,6 +110,16 @@
                                     </div>
                                 </a>
                             </div>
+                            <div class="bloque_r" style="background-image:url(img/test3.jpg);">
+                            	<a class="link_block" href="single.html" title="">
+                                    <div class="inside_bloque">
+                                       <div class="content_bloque">
+                                           <div class="separador rojo"></div>
+                                           <p class="txt_cont">Lorem ipsum dolor sit amet, onsectetur adipisicing elit, sed</p>
+                                       </div>
+                                    </div>
+                                </a>
+                            </div>
                             	
                         </div>
                     </div>
@@ -121,17 +132,19 @@
         	<div class="contenedor">
                 <div id="pie_rrss">
                 	<div class="interior_pie">
-                        <ul class="list_rrss rrss_blanco">
-                            <li><a class="fa fa-twitter" href="#"><span class="hide">Twitter</span></a></li>
-                            <li><a class="fa fa-facebook" href="#"><span class="hide">Facebook</span></a></li>
-                            <li><a class="fa fa-youtube-play" href="#"><span class="hide">Youtube</span></a></li>
-                         </ul>
-                         <p>Síguenos</p>
+                    	<div class="right_p_rrss">
+                            <p>Síguenos</p>
+                            <ul class="list_rrss rrss_blanco">
+                                <li><a class="fa fa-twitter" href="#"><span class="hide">Twitter</span></a></li>
+                                <li><a class="fa fa-facebook" href="#"><span class="hide">Facebook</span></a></li>
+                                <li><a class="fa fa-youtube-play" href="#"><span class="hide">Youtube</span></a></li>
+                             </ul>
+                         </div>
                          <ul class="menu_pie">
                             <li><a href="curso.html" title="">El Curso</a></li>
                             <li><a href="recurso.html" title="">Recursos</a></li>
-                            <li><a href="#" title="">Fotos y Videos</a></li>
-                            <li><a href="#" title="">Nosotros</a></li>
+                            <li><a href="fotos_videos.html" title="">Fotos y Videos</a></li>
+                            <li><a href="nosotros.html" title="">Nosotros</a></li>
                             <li><a href="#" title="">Contacto</a></li>
                          </ul>
                    </div>  
@@ -140,8 +153,8 @@
                     <div class="interior_pie">
                         <p class="logo_foot">Cambridge University Press</p>
                         <p class="copy_foot">&copy; Cambridge University Press 2014
-                            <span><a href="/aviso-legal">Aviso legal</a></span>
-                            <span><a href="/nosotros/contacto">Contacto</a></span>
+                            <span><a href="#">Aviso legal</a></span>
+                            <span><a href="#">Contacto</a></span>
                         </p>
                     </div>
                 </div>
@@ -149,7 +162,8 @@
         </div>
         <!--Fin pie-->
         <a href="#" class="up-window">Subir</a>
-    </div><!--Fin wrapper-->    
+    </div><!--Fin wrapper--> 
+    </div><!--Fin mask wrapper-->     
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.bxslider.min.js"></script>
     <script src="js/jquery.cookie.js"></script>

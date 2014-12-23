@@ -43,19 +43,26 @@ jQuery(window).load(function(){
 jQuery(document).ready(function(){
 	
 	//Reiniciar Scroll a 0
-	jQuery('body').scrollTo( "0px", 0,function(){
+	/*jQuery('body').scrollTo( "0px", 0,function(){
 		//Pillar anclas de la url si las hay 
 		var hash = window.location.hash.substring(1);
 		if(hash!=""){
 			//jQuery('body').stop().clearQueue().scrollTo(jQuery('#'+hash),800,{axis:'y',easing:'easeInOutExpo'});
 		}
-	});
+	});*/
+	
+	
+	//Cargar librería Lightbox
+	jQuery(".boxer").boxer();
 	
 	jQuery(window).scroll(control_scroll);
 	
 	//Obtenemos altura y anchura del navegador
 	var h_win=jQuery('#wrapper').height();
 	var w_win=window.innerWidth;
+	
+	//Máscara wrapper
+	jQuery('#mask_wrapper').css({width:w_win,height:h_win});
 	
 	//Ajustamos elementos para resoluciones superiores a 1024px
 	if(w_win>1024){
@@ -204,29 +211,29 @@ jQuery(document).ready(function(){
 				jQuery(this).addClass('active');
 				switch (link_ant){
 					case 'comp_teacher':
-						jQuery('#profesores').stop().clearQueue().slideUp(800,function(){
+						jQuery('#profesores').stop().clearQueue().fadeOut(800,function(){
 							if(link_act=='comp_student'){
-								jQuery('#alumnos').stop().clearQueue().slideDown(800);
+								jQuery('#alumnos').stop().clearQueue().fadeIn(800);
 							}else{
-								jQuery('#digital').stop().clearQueue().slideDown(800);
+								jQuery('#digital').stop().clearQueue().fadeIn(800);
 							}
 						});
 					break;
 					case 'comp_student':
-						jQuery('#alumnos').stop().clearQueue().slideUp(800,function(){
+						jQuery('#alumnos').stop().clearQueue().fadeOut(800,function(){
 							if(link_act=='comp_teacher'){
-								jQuery('#alumnos').stop().clearQueue().slideDown(800);
+								jQuery('#alumnos').stop().clearQueue().fadeIn(800);
 							}else{
-								jQuery('#digital').stop().clearQueue().slideDown(800);
+								jQuery('#digital').stop().clearQueue().fadeIn(800);
 							}
 						});
 					break;
 					case 'comp_digitales':
-						jQuery('#digital').stop().clearQueue().slideUp(800,function(){
+						jQuery('#digital').stop().clearQueue().fadeOut(800,function(){
 							if(link_act=='comp_student'){
-								jQuery('#alumnos').stop().clearQueue().slideDown(800);
+								jQuery('#alumnos').stop().clearQueue().fadeIn(800);
 							}else{
-								jQuery('#profesores').stop().clearQueue().slideDown(800);
+								jQuery('#profesores').stop().clearQueue().fadeIn(800);
 							}
 						});
 					break;
@@ -234,11 +241,120 @@ jQuery(document).ready(function(){
 		 }
 	});
 	
-	
-	//Subir al top de la ventana 
+	//Subir al top de la ventana
 	jQuery(document).on("click",".up-window", function(e) {
 		e.preventDefault();
 		jQuery("html, body").stop().clearQueue().animate({scrollTop:0}, '800', 'easeInOutExpo');
+		
+	});
+	
+	
+	//Cambiar de secciones Videos | Fotos | Tips & Tricks
+	jQuery(document).on("click","#menu_fotos_videos ul li a", function(e) {
+		e.preventDefault();
+		//Obtenemos variables actual y a la que queremos acceder 
+		var actual_box=jQuery('#menu_fotos_videos ul li a.active').attr('rel');
+		var next_box=jQuery(this).attr('rel');
+		//Cambiamos activo en el menu
+		jQuery('#menu_fotos_videos ul li a').removeClass('active');
+		jQuery(this).addClass('active');
+		switch (next_box){
+			case 'videos':
+				if(actual_box!=next_box){
+					switch (actual_box){
+						case 'fotos':
+							jQuery('#block_fotos').fadeOut(600,function(){
+								jQuery('#block_videos').fadeIn(600);
+							});
+						break;
+						case 'tips':
+							jQuery('#block_tips').fadeOut(600,function(){
+								jQuery('#block_videos').fadeIn(600);
+							});
+						break;
+					}
+				}
+			break;
+			case 'fotos':
+				if(actual_box!=next_box){
+					switch (actual_box){
+						case 'videos':
+							jQuery('#block_videos').fadeOut(600,function(){
+								jQuery('#block_fotos').fadeIn(600);
+							});
+						break;
+						case 'tips':
+							jQuery('#block_tips').fadeOut(600,function(){
+								jQuery('#block_fotos').fadeIn(600);
+							});
+						break;
+					}
+				}
+			break;
+			case 'tips':
+				if(actual_box!=next_box){
+					switch (actual_box){
+						case 'videos':
+							jQuery('#block_videos').fadeOut(600,function(){
+								jQuery('#block_tips').fadeIn(600);
+							});
+						break;
+						case 'fotos':
+							jQuery('#block_fotos').fadeOut(600,function(){
+								jQuery('#block_tips').fadeIn(600);
+							});
+						break;
+					}
+				}
+			break;
+		}
+	});
+	
+	//Cambiar niveles videos 
+	jQuery(document).on("click","#list_videos .menu_levels li a", function(e) {
+		e.preventDefault();
+		if(!jQuery(this).hasClass('active')) {
+			var actual_box=jQuery('#list_videos .menu_levels li a.active').attr('rel');
+			var next_box=jQuery(this).attr('rel');
+			jQuery('#list_videos .menu_levels li a').removeClass('active');
+			jQuery(this).addClass('active');
+			//Cerramos el bloque actual y mostramos el seleccionado
+			jQuery('#list_videos #level_'+actual_box).fadeOut(600,function(){
+				jQuery('#list_videos #level_'+next_box).fadeIn(600);	
+			});
+		}
+		
+	});
+	
+	//Cambiar niveles tips and tricks 
+	jQuery(document).on("click","#list_fotos .menu_levels li a", function(e) {
+		e.preventDefault();
+		if(!jQuery(this).hasClass('active')) {
+			var actual_box=jQuery('#list_fotos .menu_levels li a.active').attr('rel');
+			var next_box=jQuery(this).attr('rel');
+			jQuery('#list_fotos .menu_levels li a').removeClass('active');
+			jQuery(this).addClass('active');
+			//Cerramos el bloque actual y mostramos el seleccionado
+			jQuery('#list_fotos #level_'+actual_box).fadeOut(600,function(){
+				jQuery('#list_fotos #level_'+next_box).fadeIn(600);	
+			});
+		}
+		
+	});
+	
+	//Cambiar niveles tips and tricks 
+	jQuery(document).on("click","#list_tips .menu_levels li a", function(e) {
+		e.preventDefault();
+		if(!jQuery(this).hasClass('active')) {
+			var actual_box=jQuery('#list_tips .menu_levels li a.active').attr('rel');
+			var next_box=jQuery(this).attr('rel');
+			jQuery('#list_tips .menu_levels li a').removeClass('active');
+			jQuery(this).addClass('active');
+			//Cerramos el bloque actual y mostramos el seleccionado
+			jQuery('#list_tips #level_'+actual_box).fadeOut(600,function(){
+				jQuery('#list_tips #level_'+next_box).fadeIn(600);	
+			});
+		}
 		
 	});
 								
@@ -249,6 +365,9 @@ jQuery(document).ready(function(){
 		//Obtenemos altura y anchura del navegador
 		var h_win=jQuery(document).height();
 		var w_win=window.innerWidth;
+		
+		//Máscara wrapper
+	   jQuery('#mask_wrapper').css({width:w_win,height:h_win});
 		
 		//Ajustamos elementos para resoluciones superiores a 1024px
 		if(w_win>1024){

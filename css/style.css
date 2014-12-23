@@ -77,6 +77,7 @@ body{margin:0;padding:0;font-family:'latoregular', Helvetica, sans-serif;font-si
 #background-left-space {height: 100%;left: 0;position: absolute;top: 0;width: 50%;background:#ffffff;z-index:1;background:#ffffff url(../img/sprite_l.png) right 350px top 305px no-repeat;}
 #background-right-space {height: 100%;left: 50%;position: absolute;top: 0;width: 50%;background:#ff5c48;z-index:1;background:url(../img/sprite_bg.jpg) 512px 0px no-repeat;}
 
+#mask_wrapper{overflow:hidden;}
 #wrapper{background:#ff5c48;width:100%;max-width:1024px;margin:0 auto;position:relative;z-index:5;}
 .contenedor{width:100%;max-width:1024px;margin:0 auto;position:relative;}
 
@@ -93,13 +94,13 @@ PROPIEDADES CABECERA
 #menu_cab{position:absolute;bottom:0;display:block;width:100%;z-index:20;}
 .main_menu{margin:0;padding:0;font-size: 0;}
 .main_menu li{display:inline-block;width:25%;font-size: 16px;}
-.main_menu li a{height:90px;line-height:90px;color:#ffffff;display:inline-block;text-align:center;width:100%;background:rgba(0,0,0,0.2);font-size:20px;font-family:'kreonregular', Helvetica, sans-serif;}
+.main_menu li a{height:90px;line-height:90px;color:#ffffff;display:inline-block;text-align:center;width:100%;background:rgba(0,0,0,0.2);font-size:20px;font-family:'sanchezregular', Helvetica, sans-serif;}
 .main_menu li a.active{background:#ffffff;color:#ff5c48;}
 
 /** SLIDER HOME **/
 #cover-top{height:480px;position:absolute;width:100%;z-index:10;background-repeat:no-repeat;background-position:center center;background-size:cover;-ms-behavior: url(/backgroundsize.min.htc);}
 #cover-top:after {content:'';position:absolute;left:0px;top:0px;width:100%;height:100%;background:-moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 0.6)));background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);background:-o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);background:-ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);background:linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff',endColorstr='#99000000',GradientType=0)}
-#titul_secc{display:inline-block;position:absolute;z-index:20;color:#ffffff;font-size:50px;font-family:'kreonregular', Helvetica, sans-serif;left:0;bottom:150px;}
+#titul_secc{display:inline-block;position:absolute;z-index:20;color:#ffffff;font-size:50px;font-family:'sanchezregular', Helvetica, sans-serif;left:0;bottom:150px;}
 
 /** SLIDER HOME **/
 #slider{height:480px;position:absolute;width:100%;z-index:10;}
@@ -109,11 +110,11 @@ PROPIEDADES CABECERA
 #info_slider{position:absolute;width:580px;z-index:30;overflow:hidden;height:170px;margin-left:-60px;top:50%;margin-top:-75px;}
 #content_slider{margin-left:60px;margin-right:60px;width:460px;height:170px;overflow:hidden;}
 .info_box{overflow:hidden;float:left;}
-.info_box h2{font-size:50px;font-family:'kreonregular', Helvetica, sans-serif;line-height:48px;margin-bottom:10px;}
+.info_box h2{font-size:50px;font-family:'sanchezregular', Helvetica, sans-serif;line-height:48px;margin-bottom:10px;}
 .info_box h2 a{color:#ffffff;}
 .info_box p{color:#ffffff;}
-.prev_slider{position:absolute;top:0;left:0;display:block;background:url(../img/arrow_slider.png) 0px -52px no-repeat;width:35px;height:54px;top:50%;margin-top:-27px;text-indent:-99999px;}
-.next_slider{position:absolute;top:0;right:0;display:block;background:url(../img/arrow_slider.png) 0px 0px no-repeat;width:35px;height:54px;top:50%;margin-top:-27px;text-indent:-99999px;}
+.prev_slider{position:absolute;top:0;left:0;display:block;background:url(../img/arrow_slider.png) 0px 0px no-repeat;width:12px;height:24px;top:50%;margin-top:-12px;text-indent:-99999px;}
+.next_slider{position:absolute;top:0;right:0;display:block;background:url(../img/arrow_slider.png) 0px -24px no-repeat;width:12px;height:24px;top:50%;margin-top:-12px;text-indent:-99999px;}
 #bullet_slider{position:absolute;bottom:0px;}
 #bullet_slider a{display:inline-block;background-image:url(../img/bullet_slider.png);background-repeat:no-repeat;background-position:0px 0px;width:10px;height:10px;overflow:hidden;text-indent:-99999px;margin-left:3px;}
 #bullet_slider a:first-child{margin-left:0;}
@@ -131,6 +132,7 @@ PROPIEDADES CABECERA
 /** LOGOS **/
 #logo_cambridge{display:block;text-indent:-99999px;width:148px;height:48px;background:url(../img/logo_cambridge.jpg) top left no-repeat;position:absolute;top:0;left:0;z-index:20;}
 #logo_libro{display:block;text-indent:-99999px;width:380px;height:347px;background:url(../img/logo_libro.png) top left no-repeat;position:absolute;top:50%;right:0;margin-top:-224px;margin-right:-115px;z-index:20;}
+#logo_libro a{display:block;width:380px;height:347px;}
 
 /*****************************
 PROPIEDADES CUERPO
@@ -155,11 +157,11 @@ PROPIEDADES CUERPO
 
 .inside_bloque{position:absolute;width:0;bottom:0;width:100%;z-index:10;}
 .content_bloque{padding-bottom:30px;padding-left:30px;padding-right:30px;}
-.inside_bloque h2{font-family:'kreonregular', Helvetica, sans-serif;font-size:34px;margin-bottom:10px;padding-right:20px;line-height:31px;}
+.inside_bloque h2{font-family:'sanchezregular', Helvetica, sans-serif;font-size:34px;margin-bottom:10px;padding-right:20px;line-height:31px;color:#ffffff;}
 .inside_bloque h2 a{color:#ffffff;}
 .inside_bloque p{color:#ffffff;font-size:18px;margin-top:12px;line-height:18px;}
-.inside_bloque p.txt_cont{font-family:'kreonregular', Helvetica, sans-serif;font-size:20px;}
-.clasif-cont{display:inline-block;position:absolute;top:30px;left:30px;background:#ffffff;color:#ff5c48;font-family:'kreonregular', Helvetica, sans-serif;font-size:14px;padding-left:20px;padding-right:20px;}
+.inside_bloque p.txt_cont{font-family:'sanchezregular', Helvetica, sans-serif;font-size:20px;}
+.clasif-cont{display:inline-block;position:absolute;top:30px;left:30px;background:#ffffff;color:#ff5c48;font-family:'sanchezregular', Helvetica, sans-serif;font-size:14px;padding-left:20px;padding-right:20px;}
 
 .separador{display:block;width:80px;height:5px;}
 .separador.azul{background:#00c2df;}
@@ -173,16 +175,19 @@ PROPIEDADES PIE
 
 #pie{}
 
-.interior_pie{width:100%;max-width:1024px;}
+.interior_pie{width:100%;max-width:1024px;overflow:hidden;}
 
-#pie_rrss{background:#164362;padding-top:60px;padding-bottom:60px;text-align:center;}
+#pie_rrss{background:#164362;padding-top:30px;padding-bottom:30px;text-align:center;}
+.right_p_rrss{float:right;margin-right:30px;}
+#pie_rrss .list_rrss{display:inline-block;}
 #pie_rrss .list_rrss li a{margin-left:30px;}
 #pie_rrss .list_rrss li:first-child a {margin-left: 0;}
-#pie_rrss p{color:#ff5c48;display:inline-block;border-top:2px solid #7ba6bb;padding-top:7px;margin-top:30px;margin-bottom:80px;font-family:'kreonregular', Helvetica, sans-serif;font-size:20px;}
-#pie_rrss .menu_pie{padding:0;margin:0;font-size:0;}
-#pie_rrss .menu_pie li{display:inline-block;font-size:16px;margin-left:40px;}
+#pie_rrss p{color:#ff5c48;display:inline-block;font-family:'sanchezregular', Helvetica, sans-serif;font-size:20px;display:inline-block;margin-right:30px;}
+
+#pie_rrss .menu_pie{padding:0;margin:0;font-size:0;display:inline-block;float:left;margin-left:30px;}
+#pie_rrss .menu_pie li{display:inline-block;font-size:16px;margin-left:20px;height:36px;line-height:36px;}
 #pie_rrss .menu_pie li:first-child{margin-left:0;}
-#pie_rrss .menu_pie li a{color:#7ba6bb;font-family:'kreonregular', Helvetica, sans-serif;font-size:16px;}
+#pie_rrss .menu_pie li a{color:#7ba6bb;font-family:'sanchezregular', Helvetica, sans-serif;font-size:16px;}
 
 #pie_info{background:#133e5c;padding-top:40px;padding-bottom:150px;}
 #pie_info > div {overflow: hidden;}
@@ -199,16 +204,16 @@ PROPIEDADES CURSOS
 .colum_intro{width:50%;float:left;}
 .colum_intro div{padding-left:30px;padding-right:30px;margin-bottom:60px;}
 .colum_intro div:last-child{margin-bottom:0;}
-.colum_intro div h3{font-size:40px;color:#00c2df;font-family:'kreonregular', Helvetica, sans-serif;margin-bottom:20px;line-height:41px;}
+.colum_intro div h3{font-size:40px;color:#00c2df;font-family:'sanchezregular', Helvetica, sans-serif;margin-bottom:20px;line-height:41px;}
 .colum_intro div p{font-family:'cabinregular', Helvetica, sans-serif;font-size:18px;color:#414042;}
 .colum_intro div p strong{font-family:'cabinbold', Helvetica, sans-serif;}
 .colum_intro div img{max-width:100%;}
 
 #cover_componentes{height:250px;background-repeat:no-repeat;background-position:center center;background-size:cover;-ms-behavior: url(/backgroundsize.min.htc);position:relative;}
-#cover_componentes h3{position:absolute;color:#ffffff;font-family:'kreonregular', Helvetica, sans-serif;font-size:16px;left:70px;font-size:40px;bottom:150px;}
+#cover_componentes h3{position:absolute;color:#ffffff;font-family:'sanchezregular', Helvetica, sans-serif;font-size:16px;left:70px;font-size:40px;bottom:150px;}
 #cover_componentes ul{margin:0;padding:0;position:absolute;bottom:0;font-size:0;display:block;width:100%;}
 #cover_componentes ul li{display:inline-block;font-size:16px;width:25%;}
-#cover_componentes ul li a{height:90px;line-height:90px;color:#ffffff;display:inline-block;text-align:center;width:100%;background:rgba(0,0,0,0.2);font-size:20px;font-family:'kreonregular', Helvetica, sans-serif;}
+#cover_componentes ul li a{height:90px;line-height:90px;color:#ffffff;display:inline-block;text-align:center;width:100%;background:rgba(0,0,0,0.2);font-size:20px;font-family:'sanchezregular', Helvetica, sans-serif;}
 #cover_componentes ul li a.active{background:#00c2df;color:#ffffff;}
 
 #cont_componentes{padding-bottom:60px;}
@@ -219,7 +224,7 @@ PROPIEDADES CURSOS
 .header_comp{height:250px;background-repeat:no-repeat;background-position:center center;background-size:cover;-ms-behavior: url(/backgroundsize.min.htc);position:relative;}
 .header_comp:after{background:#00c2df;content:'';position:absolute;left:0px;top:0px;width:100%;height:100%;opacity:0.7;}
 .inside_header_c{position:absolute;bottom:30px;padding-left:30px;padding-right:30px;z-index:20;}
-.inside_header_c h4{margin-top:10px;font-family:'kreonregular', Helvetica, sans-serif;font-size:20px;}
+.inside_header_c h4{margin-top:10px;font-family:'sanchezregular', Helvetica, sans-serif;font-size:20px;}
 .inside_header_c h4 a{color:#ffffff;}
 .separador_big{display:block;height:5px;width:150px;background:#ffffff;}
 .body_comp{padding:30px;}
@@ -231,16 +236,96 @@ PROPIEDADES RECURSOS
 #cont_recursos{padding-top:60px;overflow:hidden;}
 .colum_recursos{width:50%;float:left;}
 .body_recurso{padding-left:30px;padding-right:30px;padding-bottom:30px;}
-.body_recurso h3{color:#00c2df;font-size:40px;font-family:'kreonregular', Helvetica, sans-serif;margin-bottom:40px;}
+.body_recurso h3{color:#00c2df;font-size:40px;font-family:'sanchezregular', Helvetica, sans-serif;margin-bottom:40px;}
 .body_recurso p{font-size:18px;color:#414042;font-family:'cabinregular', Helvetica, sans-serif;}
 #list_recursos{overflow:hidden;padding-left:0;padding-right:0;}
 .link_block{display:block;height:100%;width:100%;z-index:15;position:absolute;}
 
+#list_recursos .bloque_r:last-child{width:100%;}
 .bloque_r{height:250px;width:50%;float:left;position:relative;background-size:cover;-ms-behavior: url(/backgroundsize.min.htc);background-position:center center;background-repeat:no-repeat;padding-left:0;padding-right:0;margin-bottom:0;}
 .bloque_r:before {display:none;visibility:hidden;opacity:0;content:'';position:absolute;left:0px;top:0px;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.5);-webkit-animation:fadeIn 0.4s forwards;animation:fadeIn 0.4s forwards}
 .bloque_r:hover::before{display:block;visibility:visible;opacity:1;z-index:10;}
 .bloque_r:after {content:'';position:absolute;left:0px;top:0px;width:100%;height:100%;background:-moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 0.6)));background:-webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);background:-o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);background:-ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);background:linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff',endColorstr='#99000000',GradientType=0)}
 
+/*****************************
+PROPIEDADES RECURSOS SINGLE
+******************************/
+#menu_recursos{float:left;display:block;width:25%;}
+#cont_single{float:left;display:block;width:75%;padding-bottom:150px;}
+
+#cover_recurso{position:relative;height:250px;background-size:cover;-ms-behavior: url(/backgroundsize.min.htc);background-position:center center;background-repeat:no-repeat;}
+#cover_recurso h3{font-family:'sanchezregular', Helvetica, sans-serif;color:#00c2df;font-size:40px;position:absolute;bottom:30px;left:30px;}
+
+.block_recur{margin-top:50px;}
+.block_recur h4{font-size:24px;color:#00c2df;font-family:'sanchezregular', Helvetica, sans-serif;margin-bottom:15px;}
+.block_recur p{font-size:18px;color:#414042;font-family:'cabinregular', Helvetica, sans-serif;}
+.block_recur h5{font-family:'cabinbold', Helvetica, sans-serif;font-size:18px;margin-top:30px;}
+.block_recur ul li{color:#414042;font-family:'cabinregular', Helvetica, sans-serif;font-size:16px;}
+.block_recur ul li a{text-decoration:underline;color:#414042;}
+
+#menu_recursos ul{padding-left:30px;padding-right:30px;}
+#menu_recursos ul li{margin-bottom:15px;}
+#menu_recursos ul li a{color:#a2dae8;font-size:20px;font-family:'sanchezregular', Helvetica, sans-serif;-webkit-transition: all 0.3s linear;-moz-transition: all 0.3s linear;-o-transition: all 0.3s linear;transition: all 0.3s linear;}
+#menu_recursos ul li a:hover{color:#ff5c48;}
+#menu_recursos ul li a.active{color:#ff5c48;}
+
+/*****************************
+PROPIEDADES NOSOTROS
+******************************/
+#cont_nosotros{padding-top:60px;}
+.inside_nosotros{display:block;width:75%;margin-bottom:35px;}
+.inside_nosotros>div{padding-left:30px;padding-right:30px;}
+
+.inside_nosotros h3{color:#00c2df;font-size:40px;font-family:'sanchezregular', Helvetica, sans-serif;line-height:44px;margin-bottom:35px;}
+.inside_nosotros h3 + p{color:#414042;font-size:18px;font-family:'cabinregular', Helvetica, sans-serif;}
+.inside_nosotros h3 + p a{text-decoration:underline;color:#00c2df;}
+
+.block_team{overflow:hidden;margin-bottom:35px;}
+.block_team:last-child{margin-bottom:0;}
+.box_perso{display:block;width:25%;float:left;height:250px;;background-repeat:no-repeat;background-position:center center;background-size:cover;-ms-behavior: url(/backgroundsize.min.htc);position:relative;}
+.box_perso:before {display:block;content:'';position:absolute;left:0px;top:0px;width:100%;height:100%;background-color:rgba(255, 92, 72, 0.7);-webkit-transition: all 0.3s linear;-moz-transition: all 0.3s linear;-o-transition: all 0.3s linear;transition: all 0.3s linear;}
+.box_perso:hover::before{background-color:rgba(255, 92, 72, 0);}
+.inside_perso{position:absolute;bottom:30px;left:0;z-index:10;padding-left:30px;padding-right:30px;}
+.inside_perso h4{font-family:'sanchezregular', Helvetica, sans-serif;font-size:20px;color:#ffffff;display:inline-block;}
+.inside_perso p{color:#ffffff;font-size:14px;font-family:'cabinregular', Helvetica, sans-serif;margin-top:-5px;}
+.separador_p{display:block;width:150px;height:5px;background:#ffffff;margin-bottom:20px;}
+.ico_mail{display:inline-block;width:16px;height:13px;text-indent:-99999px;background:url(../img/ico_mail.png) top left no-repeat;margin-left:8px;top:50%;margin-top:-5px;position:absolute;}
+.info_perso{position:relative;}
+
+/*****************************
+PROPIEDADES FOTOS Y VIDEOS
+******************************/
+#cont_fotos_videos{padding-top:60px;overflow:hidden;width:75%;}
+#cont_fotos_videos h3{font-family:'sanchezregular', Helvetica, sans-serif;font-size:40px;color:#00c2df;padding-left:30px;}
+#cont_fotos_videos h3 + p{padding-left:30px;margin-top:40px;margin-bottom:40px;color:#414042;font-family:'cabinregular', Helvetica, sans-serif;font-size:18px;}
+#list_fotos_videos{overflow:hidden;padding-left:0;padding-right:0;}
+#list_fotos_videos .bloque_r{width:33.3333%;}
+
+/**********************************
+PROPIEDADES FOTOS Y VIDEOS INSIDE
+**********************************/
+#cont_fotos_videos_i{padding-top:35px;overflow:hidden;}
+#cont_fotos_videos_i h3{font-family:'sanchezregular', Helvetica, sans-serif;font-size:40px;color:#00c2df;padding-left:30px;margin-top:70px;width:75%;}
+#cont_fotos_videos_i h3 + p{padding-left:30px;margin-top:40px;margin-bottom:40px;color:#414042;font-family:'cabinregular', Helvetica, sans-serif;font-size:18px;width:75%;}
+#menu_fotos_videos{}
+#menu_fotos_videos ul{padding:0;margin:0;font-size:0;}
+#menu_fotos_videos ul li{display:inline-block;font-size:16px;width:25%;}
+#menu_fotos_videos ul li a{display:block;font-family:'sanchezregular', Helvetica, sans-serif;text-align:center;font-size:20px;color:#9bd9e7;width:92%;margin:0 auto;padding-bottom:20px;border-bottom:4px solid #9bd9e7;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;}
+#menu_fotos_videos ul li a:hover{color:#ff5c48;border-bottom:4px solid #ff5c48;}
+#menu_fotos_videos ul li a.active{color:#ff5c48;border-bottom:4px solid #ff5c48;}
+
+.menu_levels{margin:0;padding:0;font-size:0;}
+.menu_levels li{font-size:16px;display:inline-block;width:25%;}
+.menu_levels li a{display:block;height:90px;line-height:90px;color:#ffffff;background:#a2dae8;font-size:20px;font-family:'sanchezregular', Helvetica, sans-serif;text-align:center;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;}
+.menu_levels li a:hover{background:#00c2df;}
+.menu_levels li a.active{background:#00c2df;}
+
+.box_unit{}
+.box_unit h4{background:#00c2df;color:#ffffff;line-height:45px;font-family:'sanchezregular', Helvetica, sans-serif;font-size:20px;padding-left:30px;}
+.content_unit{position:relative;overflow:hidden;}
+
+
+	
 /*****************************
 PROPIEDADES ESPECIALES
 ******************************/
